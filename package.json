@@ -1,0 +1,42 @@
+{
+  "name": "FEComponentLibrarySeed",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "chromatic": "chromatic --project-token=d85c1d85c97e"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.22.0",
+    "@storybook/addon-essentials": "7.6.16",
+    "@storybook/addon-interactions": "7.6.16",
+    "@storybook/addon-links": "7.6.16",
+    "@storybook/blocks": "7.6.16",
+    "@storybook/html": "7.6.16",
+    "@storybook/html-vite": "7.6.16",
+    "@storybook/test": "7.6.16",
+    "@storybook/types": "^8.6.7",
+    "chromatic": "^11.27.0",
+    "cross-env": "^7.0.3",
+    "dotenv-cli": "^8.0.0",
+    "eslint": "^9.22.0",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-prettier": "^5.2.3",
+    "globals": "^16.0.0",
+    "prettier": "^3.5.3",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "sass": "^1.86.0",
+    "storybook": "7.6.16",
+    "typescript": "^5.8.2",
+    "typescript-eslint": "^8.27.0",
+    "vite": "^6.2.2"
+  }
+}

@@ -1,0 +1,34 @@
+name: "Chromatic Deployment"
+
+on:
+  push:
+    branches:
+      - main  # or 'master' or whatever your main branch is
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  chromatic-deployment:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install PNPM
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20 # or match your local version
+          cache: "pnpm"
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Publish to Chromatic
+        run: pnpm chromatic --project-token=${{ secrets.CHROMATIC_PROJECT_TOKEN }}
